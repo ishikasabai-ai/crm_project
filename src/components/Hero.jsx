@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import crm from "../assets/7090019.jpg";
+import crm from "../assets/customer-relationship-management-concept.jpg";
 
 export default function Hero() {
   return (
