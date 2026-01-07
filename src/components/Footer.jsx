@@ -67,7 +67,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex gap-8 text-sm text-gray-300">
-          <Link to="/terms-privacy">Terms & Privacy</Link>
+          <Link to="/terms-services">Terms & Services</Link>
           <Link to="/refund-policy">Refund Policy</Link>
           <Link to="/privacy-policy">Privacy Policy</Link>
         </div>

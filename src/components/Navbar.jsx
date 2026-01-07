@@ -15,8 +15,8 @@ export default function Navbar() {
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/">Products</Link></li>
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/about">About us</Link></li>
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/contact">Contact us</Link></li>
-          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/">Resources</Link></li>
-          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/">Pricing</Link></li>
+          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/resources">Resources</Link></li>
+          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/pricing">Pricing</Link></li>
         </ul>
 
         <div className="hidden md:block">

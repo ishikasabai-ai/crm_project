@@ -8,6 +8,14 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import CustomerStories from "./components/CustomerStories"
+import Products from "./components/Products"
+import Overview from "./components/Overview"
+import Resources from "./components/Resources"
+import HelpCenter from "./components/HelpCenter"
+import TermsServices from "./components/TermsServices"
+import RefundPolicy from "./components/RefundPolicy"
+import PrivacyPolicy from "./components/PrivacyPolicy"
 
 export default function App() {
   return (
@@ -26,6 +34,15 @@ export default function App() {
             } />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/customer-stories" element={<CustomerStories />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/help-center" element={<HelpCenter />} />
+            <Route path="/terms-services" element={<TermsServices />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </main>
         <Footer />
