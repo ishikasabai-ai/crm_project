@@ -35,13 +35,7 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-6">Resources</h4>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li>
-              <Link to="/blog" className="hover:text-[#4F9CF9] cursor-pointer">Blog</Link>
-            </li>
-            <li>
-              <Link to="/guides" className="hover:text-[#4F9CF9] cursor-pointer">Guides</Link>
-            </li>
-            <li>
-              <Link to="/help-cenetr" className="hover:text-[#4F9CF9] cursor-pointer">Help Center</Link>
+              <Link to="/help-center" className="hover:text-[#4F9CF9] cursor-pointer">Help Center</Link>
             </li>
           </ul>
         </div>
@@ -51,12 +45,6 @@ export default function Footer() {
           <ul className="space-y-4 text-gray-300 text-sm">
             <li>
               <Link to="/about" className="hover:text-[#4F9CF9] cursor-pointer">About</Link>
-            </li>
-            <li>
-              <Link to="/carrers" className="hover:text-[#4F9CF9] cursor-pointer">Carrers</Link>
-            </li>
-            <li>
-              <Link to="/legal" className="hover:text-[#4F9CF9] cursor-pointer">Legal</Link>
             </li>
           </ul>
         </div>

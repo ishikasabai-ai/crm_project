@@ -12,7 +12,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center text-sm font-medium">
-          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/">Products</Link></li>
+          <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/Products">Products</Link></li>
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/about">About us</Link></li>
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/contact">Contact us</Link></li>
           <li className="hover:text-[#4F9CF9] cursor-pointer transition-colors"><Link to="/resources">Resources</Link></li>
