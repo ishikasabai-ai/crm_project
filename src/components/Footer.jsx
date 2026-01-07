@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#043873] text-white pt-20 pb-10 px-6">
+    <footer className="bg-[#020617] text-white pt-20 pb-10 px-6 md:px-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
 
         <div className="space-y-6">
@@ -18,15 +18,19 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-6">Product</h4>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li>
-              <Link to="/overview" className="hover:text-[#4F9CF9] cursor-pointer">Overview</Link>
+              <Link to="/products" className="hover:text-[#D946EF] cursor-pointer">Products</Link>
             </li>
-
             <li>
-              <Link className="hover:text-[#4F9CF9] cursor-pointer" to="/pricing">Pricing</Link>
+              <Link to="/products" className="hover:text-[#D946EF] cursor-pointer">Services</Link>
             </li>
-
             <li>
-              <Link to="/customer-stories" className="hover:text-[#4F9CF9] cursor-pointer">Customer Stories</Link>
+              <Link to="/overview" className="hover:text-[#D946EF] cursor-pointer">Overview</Link>
+            </li>
+            <li>
+              <Link to="/pricing" className="hover:text-[#D946EF] cursor-pointer">Pricing</Link>
+            </li>
+            <li>
+              <Link to="/customer-stories" className="hover:text-[#D946EF] cursor-pointer">Customer stories</Link>
             </li>
 
           </ul>
@@ -36,7 +40,7 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-6">Resources</h4>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li>
-              <Link to="/help-center" className="hover:text-[#4F9CF9] cursor-pointer">Help Center</Link>
+              <Link to="/help-center" className="hover:text-[#D946EF] cursor-pointer">Help Center</Link>
             </li>
           </ul>
         </div>
@@ -45,7 +49,7 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-6">Company</h4>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li>
-              <Link to="/about" className="hover:text-[#4F9CF9] cursor-pointer">About</Link>
+              <Link to="/about" className="hover:text-[#D946EF] cursor-pointer">About</Link>
             </li>
           </ul>
         </div>
@@ -64,9 +68,9 @@ export default function Footer() {
         <p className="text-sm text-gray-400">© 2026 Crivient LLC.</p>
 
         <div className="flex gap-6">
-          <Facebook className="hover:text-[#4F9CF9] cursor-pointer transition-colors" size={20} />
-          <FaXTwitter className="hover:text-[#4F9CF9] cursor-pointer transition-colors" size={20} />
-          <Linkedin className="hover:text-[#4F9CF9] cursor-pointer transition-colors" size={20} />
+          <Facebook className="hover:text-[#D946EF] cursor-pointer transition-colors" size={20} />
+          <FaXTwitter className="hover:text-[#D946EF] cursor-pointer transition-colors" size={20} />
+          <Linkedin className="hover:text-[#D946EF] cursor-pointer transition-colors" size={20} />
         </div>
       </div>
     </footer>

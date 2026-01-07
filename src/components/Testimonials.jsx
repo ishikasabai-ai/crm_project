@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -22,27 +23,61 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section className="px-6 py-20 md:py-32 bg-gray-50">
+    <section className="px-6 py-20 md:py-32 bg-[#030712]">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-3xl md:text-5xl font-bold mb-16 text-center text-[#043873]">What Our Clients Say</h3>
+        <motion.h3 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold mb-16 text-center text-white"
+        >
+          What Our Clients Say
+        </motion.h3>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((item, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col hover:shadow-xl transition-shadow">
-              <Quote size={40} className="text-[#4F9CF9] mb-6" />
-              <p className="text-gray-600 mb-8 text-lg italic leading-relaxed flex-grow">"{item.quote}"</p>
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-8"
+        >
+          {testimonials.map((testimonial, index) => (
+            <motion.div 
+              key={index} 
+              variants={item}
+              whileHover={{ y: -5 }}
+              className="bg-[#1F2937] p-8 rounded-2xl shadow-lg border border-gray-800 flex flex-col hover:shadow-xl transition-all"
+            >
+              <Quote size={40} className="text-[#D946EF] mb-6" />
+              <p className="text-gray-300 mb-8 text-lg italic leading-relaxed flex-grow">"{testimonial.quote}"</p>
               
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                <img src={item.avatar} alt={item.name} className="w-14 h-14 rounded-full object-cover" />
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
+                <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover" />
                 <div>
-                  <h4 className="font-bold text-[#043873]">{item.name}</h4>
-                  <p className="text-sm text-gray-500">{item.role}</p>
+                  <h4 className="font-bold text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

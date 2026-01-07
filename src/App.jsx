@@ -16,7 +16,7 @@ import HelpCenter from "./components/HelpCenter"
 import TermsServices from "./components/TermsServices"
 import RefundPolicy from "./components/RefundPolicy"
 import PrivacyPolicy from "./components/PrivacyPolicy"
-
+import RequestDemo from "./components/RequestDemo"
 
 export default function App() {
   return (
@@ -43,6 +43,7 @@ export default function App() {
             <Route path="/terms-services" element={<TermsServices />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/request-demo" element={<RequestDemo />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
