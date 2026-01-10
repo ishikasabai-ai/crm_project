@@ -1,21 +1,23 @@
-import { Users, BarChart2, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import crm1 from "../assets/crm1.jpeg";
+import crm2 from "../assets/crm2.jpeg";
+import crm3 from "../assets/crm3.jpeg";
 
 const features = [
   {
-    icon: <Users size={40} className="text-[#D946EF]" />,
-    title: "Lead & Contact Management",
-    description: "Keep all your leads and contacts organized in one central place."
+    image: crm1,
+    title: "Visual Pipeline",
+    description: "Track deals visually and never miss an opportunity."
   },
   {
-    icon: <BarChart2 size={40} className="text-[#D946EF]" />,
-    title: "Sales Pipeline & Deal Tracking",
-    description: "Visualize your sales process and track deals from lead to close."
+    image: crm2,
+    title: "Advanced Analytics",
+    description: "Gain deep insights into your sales performance."
   },
   {
-    icon: <Zap size={40} className="text-[#D946EF]" />,
-    title: "Automation & Workflows",
-    description: "Automate repetitive tasks and save time for what matters most."
+    image: crm3,
+    title: "Seamless Automation",
+    description: "Automate routine tasks and focus on closing deals."
   }
 ];
 
@@ -71,13 +73,19 @@ export default function Features() {
               key={index} 
               variants={item}
               whileHover={{ y: -10 }}
-              className="p-8 border border-gray-700 shadow-xl hover:shadow-2xl rounded-2xl transition-all duration-300 bg-[#111827] flex flex-col items-center text-center group"
+              className="border border-gray-700 shadow-xl hover:shadow-2xl rounded-2xl transition-all duration-300 bg-[#111827] overflow-hidden group flex flex-col"
             >
-              <div className="mb-6 p-4 bg-gray-800 rounded-full group-hover:bg-gray-700 transition-colors">
-                {feature.icon}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h4 className="font-bold text-xl mb-3 text-white">{feature.title}</h4>
-              <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+              <div className="p-6 text-center flex flex-col flex-grow">
+                <h4 className="font-bold text-xl mb-2 text-white">{feature.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
